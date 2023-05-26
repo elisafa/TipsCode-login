@@ -1,0 +1,95 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: url(../images/fundoprincipal.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  position: relative;
+}
+
+.form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 600px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.nome,
+.senha {
+  padding: 25px;
+  width: 400px;
+  height: 40px;
+  border-radius: 50px;
+  background-color: rgba(255, 255, 255, 0.11);
+  border: none;
+}
+
+.nome:focus,
+.senha:focus {
+  outline: none;
+}
+
+.btn-submit {
+  padding: 15px;
+  width: 400px;
+  border-radius: 50px;
+  border: none;
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  background-color: rgba(255, 255, 255, 0.547);
+  cursor: pointer;
+}
+
+.nome::placeholder,
+.senha::placeholder {
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  color: #fff;
+}
+
+.form-titulo2 {
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  color: #fff;
+}
+
+.form-titulo1 {
+  font-family: "Roboto", sans-serif;
+  font-size: 32px;
+  color: #fff;
+}
+
+.form-remember {
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+  color: #fff;
+  font-weight: bold;
+  width: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.form-check {
+  display: flex;
+  align-items: center;
+}
+.esqueci-senha {
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap"
+      rel="stylesheet"
+    />
+    <title>Login</title>
+    <link rel="stylesheet" href="./assets/styles/style.css" />
+  </head>
+  <body>
+    <form class="form" data-js="form">
+      <h2 class="form-titulo2">Mentoria</h2>
+      <h1 class="form-titulo1">Login</h1>
+      <input
+        class="nome"
+        type="text"
+        name="nome"
+        placeholder="username"
+        data-js="user"
+        required
+      />
+      <input
+        class="senha"
+        type="password"
+        placeholder="password"
+        data-js="passwd"
+        required
+      />
+
+      <button class="btn-submit" data-js="btn-submit" type="submit">Login</button>
+      <div class="form-remember">
+        <label class="form-check" for="remember-me" name="remember-me">
+          <input type="checkbox" name="remember-me" id="remember-me" />
+          Lembrar senha
+        </label>
+        <a class="esqueci-senha" href="#">Esqueci minha senha</a>
+      </div>
+    </form>
+
+    <p class="mostrar-login" data-js="mostrar-login"></p>
+    <script src="assets/scripts/script.js"></script>
+  </body>
+</html>
