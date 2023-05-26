@@ -1,5 +1,5 @@
-const formulario = document.querySelector("[data-js='form']");
-const mostrarLogin = document.querySelector("[data-js='mostrar-login']");
+const form = document.querySelector("[data-js='form']");
+const showLogin = document.querySelector("[data-js='show-login']");
 
 const bancoDeDados = [
   {
@@ -16,29 +16,29 @@ const bancoDeDados = [
   },
 ];
 
-formulario.addEventListener("submit", logarNoSistema);
+form.addEventListener("submit", logSystem);
 
-function logarNoSistema(event) {
+function logSystem(event) {
   event.preventDefault();
 
-  let usuario_formulario = document.querySelector("[data-js='user']").value;
-  let senha_formulario = document.querySelector("[data-js='passwd']").value;
+  let usuario_form = document.querySelector("[data-js='user']").value;
+  let senha_form = document.querySelector("[data-js='passwd']").value;
 
-  let resultado_usuario = usuarioExiste(usuario_formulario);
+  let resultado_usuario = usuarioExiste(usuario_form);
 
-  if (resultado_usuario == true) {
-    let resultado_senha = senhaUsuarioCorreta(usuario_formulario, senha_formulario);
+  if (resultado_usuario) {
+    let resultado_senha = senhaUsuarioCorreta(usuario_form, senha_form);
 
-    if (resultado_senha == true) {
-      mostrarLogin.innerHTML = `LOGIN REALIZADO COM SUCESSO! Bem vindo, ${usuario_formulario}`;
-      formulario.reset();
+    if (resultado_senha) {
+      showLogin.innerHTML = `Login realizado com sucesso! Bem vindo, ${usuario_form}`;
+      form.reset();
     } else {
-      mostrarLogin.innerHTML = `Usuario ou senha incorretos! Tente novamente`;
-      formulario.reset();
+      showLogin.innerHTML = `Usuario ou senha incorretos! Tente novamente`;
+      form.reset();
     }
   } else {
-    mostrarLogin.innerHTML = `Usuario ou senha incorretos! Tente novamente`;
-    formulario.reset();
+    showLogin.innerHTML = `Usuario ou senha incorretos! Tente novamente`;
+    form.reset();
   }
 }
 

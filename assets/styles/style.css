@@ -93,3 +93,15 @@ body {
   font-weight: bold;
   text-decoration: none;
 }
+
+.mostrar-login {
+  position: absolute;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  font-size: 28px;
+  display: block;
+  background-color: #ddd;
+  top: 600px;
+  width: 100vw;
+}
